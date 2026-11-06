@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chính sách quyền riêng tư — Tích Tài</title>
+  <style>
+    :root {
+      --bg: #f6f1e7;
+      --card: #ffffff;
+      --text: #1e1b15;
+      --muted: #6f6759;
+      --gold: #b8872f;
+      --border: #e2d7c7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+    header {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+    .badge {
+      display: inline-block;
+      color: var(--gold);
+      border: 1px solid rgba(184, 135, 47, .35);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .4px;
+    }
+    h1 { margin: 12px 0 6px; font-size: clamp(26px, 4vw, 38px); line-height: 1.2; }
+    h2 { margin: 0 0 10px; font-size: 19px; }
+    h3 { margin: 18px 0 6px; font-size: 15px; }
+    p, li { font-size: 15px; }
+    .meta { color: var(--muted); font-size: 13px; margin: 0; }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      margin: 14px 0;
+    }
+    ul { margin: 8px 0 0 20px; padding: 0; }
+    li { margin: 5px 0; }
+    a { color: var(--gold); }
+    .note {
+      background: rgba(184, 135, 47, .08);
+      border-left: 3px solid var(--gold);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    .en { border-top: 2px dashed var(--border); margin-top: 28px; padding-top: 22px; }
+    footer { color: var(--muted); font-size: 12px; text-align: center; margin-top: 24px; }
+    code { background: #f0e9dd; border-radius: 4px; padding: 1px 5px; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="badge">TÍCH TÀI · DOVIO STUDIO</span>
+    <h1>Chính sách quyền riêng tư</h1>
+    <p class="meta">Cập nhật lần cuối: 06/11/2026 · Phiên bản ứng dụng: 1.6.0</p>
+    <p class="meta">Nhà phát hành: Dovio Studio · Email hỗ trợ: <a href="mailto:dovio.support@gmail.com">dovio.support@gmail.com</a></p>
+  </header>
+
+  <section>
+    <h2>1. Giới thiệu</h2>
+    <p>
+      Tích Tài là ứng dụng quản lý tài sản cá nhân do Dovio Studio phát hành.
+      Chính sách này giải thích ứng dụng xử lý dữ liệu như thế nào khi bạn sử dụng.
+    </p>
+    <p>
+      Nguyên tắc chính: dữ liệu tài sản của bạn được lưu trên thiết bị.
+      Dovio Studio không vận hành máy chủ để thu thập dữ liệu tài sản, không bán dữ liệu,
+      không dùng quảng cáo và không dùng công cụ theo dõi.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Dữ liệu ứng dụng lưu trên thiết bị</h2>
+    <ul>
+      <li>Giao dịch mua, bán và điều chỉnh vàng.</li>
+      <li>Lô vàng, giá vốn, số lượng còn lại và kết quả lãi/lỗ.</li>
+      <li>Cửa hàng, sản phẩm và báo giá do bạn nhập.</li>
+      <li>Cài đặt ứng dụng như giao diện sáng/tối và lựa chọn định giá.</li>
+      <li>Bản sao lưu cục bộ do bạn tạo trong ứng dụng.</li>
+    </ul>
+    <p class="note">
+      Ứng dụng không yêu cầu tài khoản, không đồng bộ Cloud và không gửi dữ liệu tài sản
+      đến Dovio Studio hay bên thứ ba.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Quyền truy cập thiết bị</h2>
+    <ul>
+      <li><strong>Sinh trắc học</strong> (<code>USE_BIOMETRIC</code>, <code>USE_FINGERPRINT</code>):
+        chỉ dùng khi bạn bật khóa ứng dụng bằng vân tay/Face ID.</li>
+      <li><strong>Internet</strong> (<code>INTERNET</code>): chỉ dùng cho Google Play Billing
+        ở mục ủng hộ nhà phát triển. Các tính năng quản lý tài sản không cần mạng.</li>
+      <li><strong>Thanh toán Google Play</strong> (<code>com.android.vending.BILLING</code>):
+        dùng để xử lý giao dịch ủng hộ qua Google Play.</li>
+      <li><strong>Trạng thái mạng</strong> (<code>ACCESS_NETWORK_STATE</code>):
+        do thư viện Google Play Billing sử dụng để kiểm tra kết nối khi mua.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Ủng hộ nhà phát triển và Google Play Billing</h2>
+    <p>
+      Mục ủng hộ nhà phát triển là hoàn toàn tự nguyện và không mở khóa thêm tính năng nào.
+      Giao dịch được thực hiện qua Google Play Billing.
+    </p>
+    <ul>
+      <li>Dovio Studio không nhận, không lưu số thẻ hay thông tin thanh toán của bạn.</li>
+      <li>Google xử lý thanh toán theo Chính sách quyền riêng tư và điều khoản của Google Play.</li>
+      <li>Ứng dụng chỉ nhận thông tin giao dịch cần thiết để hoàn tất và xác nhận giao dịch.</li>
+      <li>Bạn có thể không ủng hộ và vẫn sử dụng đầy đủ tính năng miễn phí.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. Sao lưu, xuất và phục hồi dữ liệu</h2>
+    <p>
+      Bạn có thể tạo bản sao lưu SQLite trong ứng dụng, xuất/chia sẻ bản sao lưu ra ngoài
+      hoặc nhập lại file sao lưu từ thiết bị khác. Các thao tác này do bạn chủ động thực hiện.
+    </p>
+    <p class="note">
+      File sao lưu xuất ra ngoài không được mã hóa bởi ứng dụng. Hãy lưu file ở nơi an toàn
+      và không chia sẻ cho người không tin cậy.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Lưu trữ và xóa dữ liệu</h2>
+    <ul>
+      <li>Dữ liệu được lưu trong vùng riêng của ứng dụng trên thiết bị.</li>
+      <li>Gỡ ứng dụng hoặc xóa dữ liệu ứng dụng sẽ xóa cơ sở dữ liệu và các bản sao lưu nội bộ.</li>
+      <li>Bạn có thể xóa từng bản sao lưu trong ứng dụng.</li>
+      <li>File đã xuất/chia sẻ ra ngoài do bạn quản lý và xóa theo cách của bạn.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. Chia sẻ dữ liệu</h2>
+    <p>
+      Dovio Studio không bán, không cho thuê và không chia sẻ dữ liệu tài sản của bạn.
+      Dữ liệu chỉ rời thiết bị khi bạn chủ động xuất/chia sẻ file hoặc thực hiện giao dịch
+      ủng hộ qua Google Play Billing.
+    </p>
+  </section>
+
+  <section>
+    <h2>8. Quảng cáo, analytics và theo dõi</h2>
+    <p>
+      Ứng dụng không có quảng cáo, không có SDK analytics, không có crash reporting gửi ra ngoài,
+      không thu thập advertising ID và không theo dõi hành vi người dùng.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Trẻ em</h2>
+    <p>
+      Tích Tài là công cụ quản lý tài sản cá nhân, không hướng đến trẻ em dưới 13 tuổi.
+      Ứng dụng không cố ý thu thập dữ liệu cá nhân của trẻ em.
+    </p>
+  </section>
+
+  <section>
+    <h2>10. Thay đổi chính sách</h2>
+    <p>
+      Chính sách có thể được cập nhật khi ứng dụng thay đổi tính năng hoặc quy định pháp lý.
+      Phiên bản mới sẽ được đăng tại cùng địa chỉ này và ghi rõ ngày cập nhật.
+    </p>
+  </section>
+
+  <section>
+    <h2>11. Liên hệ</h2>
+    <p>
+      Nếu có câu hỏi về quyền riêng tư hoặc dữ liệu, vui lòng liên hệ:
+    </p>
+    <ul>
+      <li><strong>Nhà phát hành:</strong> Dovio Studio</li>
+      <li><strong>Email:</strong> <a href="mailto:dovio.support@gmail.com">dovio.support@gmail.com</a></li>
+    </ul>
+  </section>
+
+  <section class="en" lang="en">
+    <h2>Privacy Policy — English summary</h2>
+    <p>
+      Tích Tài is a personal asset-management app published by Dovio Studio. Asset data
+      (transactions, lots, prices, settings and local backups) is stored on your device.
+      We do not operate a server that collects your asset data, do not sell data, and do not
+      use ads, analytics or tracking.
+    </p>
+    <p>
+      Internet and billing permissions are used only for optional Google Play Billing
+      purchases in the support section. Google processes payments and does not share your
+      payment card details with us. Biometric permissions are used only for the optional
+      app lock. Exported backup files are not encrypted by the app; store them securely.
+    </p>
+    <p>
+      Uninstalling the app or clearing app data deletes local data and internal backups.
+      Contact: <a href="mailto:dovio.support@gmail.com">dovio.support@gmail.com</a>.
+    </p>
+  </section>
+
+  <footer>
+    © Dovio Studio · Tích Tài · Trang chính sách quyền riêng tư
+  </footer>
+</main>
+</body>
+</html>
