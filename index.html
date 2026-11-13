@@ -114,6 +114,10 @@
     <ul>
       <li><strong>Sinh trắc học</strong> (<code>USE_BIOMETRIC</code>, <code>USE_FINGERPRINT</code>):
         chỉ dùng khi bạn bật khóa ứng dụng bằng vân tay/Face ID.</li>
+      <li><strong>Mã PIN khóa ứng dụng</strong>: được băm bằng PBKDF2-HMAC-SHA256
+        với salt ngẫu nhiên và lưu trong kho bảo mật của hệ điều hành; ứng dụng
+        không lưu PIN dạng rõ. Sau nhiều lần nhập sai, việc nhập PIN bị tạm khóa
+        trong một khoảng thời gian.</li>
       <li><strong>Internet</strong> (<code>INTERNET</code>): chỉ dùng cho khoản ủng hộ
         tùy chọn qua Google Play Billing hoặc App Store. Các tính năng quản lý tài sản
         không cần mạng và vẫn hoạt động khi bật chế độ máy bay.</li>
@@ -232,8 +236,11 @@
       offline and remain available in airplane mode.
     </p>
     <p>
-      Biometric permissions are used only for the optional app lock. Exported backup
-      files are not encrypted by the app; store them securely. Uninstalling the app
+      Biometric permissions are used only for the optional app lock. The app PIN is
+      hashed with PBKDF2-HMAC-SHA256 and a random salt in the operating system's
+      secure storage; the plaintext PIN is never stored. Repeated incorrect attempts
+      trigger a temporary lockout. Exported backup files are not encrypted by the
+      app; store them securely. Uninstalling the app
       or clearing app data deletes local data and internal backups.
       Contact: <a href="mailto:dovio.support@gmail.com">dovio.support@gmail.com</a>.
     </p>
