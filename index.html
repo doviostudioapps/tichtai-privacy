@@ -76,7 +76,7 @@
   <header>
     <span class="badge">TÍCH TÀI · DOVIO STUDIO</span>
     <h1>Chính sách quyền riêng tư</h1>
-    <p class="meta">Cập nhật lần cuối: 06/11/2026 · Phiên bản ứng dụng: 1.6.0</p>
+    <p class="meta">Cập nhật lần cuối: 13/11/2026 · Phiên bản ứng dụng: 1.7.0</p>
     <p class="meta">Nhà phát hành: Dovio Studio · Email hỗ trợ: <a href="mailto:dovio.support@gmail.com">dovio.support@gmail.com</a></p>
   </header>
 
@@ -99,7 +99,8 @@
       <li>Giao dịch mua, bán và điều chỉnh vàng.</li>
       <li>Lô vàng, giá vốn, số lượng còn lại và kết quả lãi/lỗ.</li>
       <li>Cửa hàng, sản phẩm và báo giá do bạn nhập.</li>
-      <li>Cài đặt ứng dụng như giao diện sáng/tối và lựa chọn định giá.</li>
+      <li>Cài đặt ứng dụng như giao diện sáng/tối, ngôn ngữ, đơn vị hiển thị,
+        tiền tệ cơ sở và lựa chọn định giá.</li>
       <li>Bản sao lưu cục bộ do bạn tạo trong ứng dụng.</li>
     </ul>
     <p class="note">
@@ -113,24 +114,33 @@
     <ul>
       <li><strong>Sinh trắc học</strong> (<code>USE_BIOMETRIC</code>, <code>USE_FINGERPRINT</code>):
         chỉ dùng khi bạn bật khóa ứng dụng bằng vân tay/Face ID.</li>
-      <li><strong>Internet</strong> (<code>INTERNET</code>): chỉ dùng cho Google Play Billing
-        ở mục ủng hộ nhà phát triển. Các tính năng quản lý tài sản không cần mạng.</li>
+      <li><strong>Internet</strong> (<code>INTERNET</code>): chỉ dùng cho khoản ủng hộ
+        tùy chọn qua Google Play Billing hoặc App Store. Các tính năng quản lý tài sản
+        không cần mạng và vẫn hoạt động khi bật chế độ máy bay.</li>
       <li><strong>Thanh toán Google Play</strong> (<code>com.android.vending.BILLING</code>):
-        dùng để xử lý giao dịch ủng hộ qua Google Play.</li>
+        dùng để xử lý giao dịch ủng hộ trên Android qua Google Play.</li>
       <li><strong>Trạng thái mạng</strong> (<code>ACCESS_NETWORK_STATE</code>):
-        do thư viện Google Play Billing sử dụng để kiểm tra kết nối khi mua.</li>
+        do thư viện thanh toán sử dụng để kiểm tra kết nối khi mua.</li>
+      <li><strong>App Store / Apple</strong>: giao dịch ủng hộ trên iOS do Apple xử lý;
+        ứng dụng chỉ nhận trạng thái giao dịch cần thiết để hoàn tất.</li>
     </ul>
+    <p class="note">
+      Ứng dụng không yêu cầu quyền vị trí, danh bạ, camera, micro hay ảnh.
+      Quyền tệp/chia sẻ chỉ được dùng khi bạn chủ động xuất, nhập hoặc chia sẻ
+      bản sao lưu/CSV.
+    </p>
   </section>
 
   <section>
-    <h2>4. Ủng hộ nhà phát triển và Google Play Billing</h2>
+    <h2>4. Ủng hộ nhà phát triển và thanh toán qua cửa hàng ứng dụng</h2>
     <p>
       Mục ủng hộ nhà phát triển là hoàn toàn tự nguyện và không mở khóa thêm tính năng nào.
-      Giao dịch được thực hiện qua Google Play Billing.
+      Giao dịch được thực hiện qua Google Play Billing trên Android hoặc App Store trên iOS.
     </p>
     <ul>
       <li>Dovio Studio không nhận, không lưu số thẻ hay thông tin thanh toán của bạn.</li>
-      <li>Google xử lý thanh toán theo Chính sách quyền riêng tư và điều khoản của Google Play.</li>
+      <li>Google hoặc Apple xử lý thanh toán theo chính sách quyền riêng tư và điều khoản
+        của cửa hàng tương ứng.</li>
       <li>Ứng dụng chỉ nhận thông tin giao dịch cần thiết để hoàn tất và xác nhận giao dịch.</li>
       <li>Bạn có thể không ủng hộ và vẫn sử dụng đầy đủ tính năng miễn phí.</li>
     </ul>
@@ -163,7 +173,8 @@
     <p>
       Dovio Studio không bán, không cho thuê và không chia sẻ dữ liệu tài sản của bạn.
       Dữ liệu chỉ rời thiết bị khi bạn chủ động xuất/chia sẻ file hoặc thực hiện giao dịch
-      ủng hộ qua Google Play Billing.
+      ủng hộ qua Google Play Billing hoặc App Store. Thông tin thanh toán do cửa hàng
+      xử lý và không được gửi tới Dovio Studio.
     </p>
   </section>
 
@@ -205,19 +216,25 @@
   <section class="en" lang="en">
     <h2>Privacy Policy — English summary</h2>
     <p>
-      Tích Tài is a personal asset-management app published by Dovio Studio. Asset data
-      (transactions, lots, prices, settings and local backups) is stored on your device.
-      We do not operate a server that collects your asset data, do not sell data, and do not
-      use ads, analytics or tracking.
+      Tích Tài 1.7.0 is a personal asset-management app published by Dovio Studio.
+      Asset data (transactions, lots, prices, language, currency and unit settings,
+      and local backups) is stored on your device. We do not operate a server that
+      collects your asset data, do not sell data, and do not use ads, analytics or
+      tracking. The app does not request location, contacts, camera, microphone or
+      photo permissions.
     </p>
     <p>
-      Internet and billing permissions are used only for optional Google Play Billing
-      purchases in the support section. Google processes payments and does not share your
-      payment card details with us. Biometric permissions are used only for the optional
-      app lock. Exported backup files are not encrypted by the app; store them securely.
+      Android requests internet, billing and network-state permissions only for
+      optional support purchases through Google Play. On iOS, optional support
+      purchases are processed by the App Store. Google or Apple processes payments
+      and does not share your payment card details with us. The app receives only
+      the purchase status needed to complete the transaction. Asset features work
+      offline and remain available in airplane mode.
     </p>
     <p>
-      Uninstalling the app or clearing app data deletes local data and internal backups.
+      Biometric permissions are used only for the optional app lock. Exported backup
+      files are not encrypted by the app; store them securely. Uninstalling the app
+      or clearing app data deletes local data and internal backups.
       Contact: <a href="mailto:dovio.support@gmail.com">dovio.support@gmail.com</a>.
     </p>
   </section>
